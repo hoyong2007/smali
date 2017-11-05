@@ -53,9 +53,22 @@ public class BaseDexBuffer {
         int result = (buf[offset] & 0xff) |
                 ((buf[offset+1] & 0xff) << 8) |
                 ((buf[offset+2] & 0xff) << 16) |
-                ((buf[offset+3]) << 24);
+                ((buf[offset+3] & 0xff) << 24);
         if (result < 0) {
             throw new ExceptionWithContext("Encountered small uint that is out of range at offset 0x%x", offset);
+        }
+        return result;
+    }
+
+    public int readSmallUint(int offset, int dummy) {
+        byte[] buf = this.buf;
+        offset += baseOffset;
+        int result = (buf[offset] & 0xff) |
+                ((buf[offset+1] & 0xff) << 8) |
+                ((buf[offset+2] & 0xff) << 16) |
+                ((buf[offset+3] & 0x7f) << 24);
+        if (result < 0) {
+            throw new ExceptionWithContext("Encountered small new uint that is out of range at offset 0x%x", offset);
         }
         return result;
     }

@@ -44,6 +44,10 @@ public class ArrayDataMethodItem extends InstructionMethodItem<ArrayPayload> {
     public boolean writeTo(IndentingWriter writer) throws IOException {
         int elementWidth = instruction.getElementWidth();
 
+        if (elementWidth == 0) {
+            return true;
+        }
+
         writer.write(".array-data ");
         writer.printSignedIntAsDec(instruction.getElementWidth());
         writer.write('\n');

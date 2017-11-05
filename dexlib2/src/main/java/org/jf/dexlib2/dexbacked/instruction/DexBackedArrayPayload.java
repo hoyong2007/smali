@@ -53,9 +53,12 @@ public class DexBackedArrayPayload extends DexBackedInstruction implements Array
     public DexBackedArrayPayload(@Nonnull DexBackedDexFile dexFile,
                                  int instructionStart) {
         super(dexFile, OPCODE, instructionStart);
-
+        //System.err.println("InstructionStart : " + instructionStart);
         elementWidth = dexFile.readUshort(instructionStart + ELEMENT_WIDTH_OFFSET);
-        elementCount = dexFile.readSmallUint(instructionStart + ELEMENT_COUNT_OFFSET);
+        //System.err.println("ElementWidth : " + elementWidth);
+        //elementCount = dexFile.readSmallUint(instructionStart + ELEMENT_COUNT_OFFSET, 0);
+        elementCount = dexFile.readInt(instructionStart + ELEMENT_COUNT_OFFSET);
+        //System.err.println("ElementCount : " + elementCount);
         if (((long)elementWidth) * elementCount > Integer.MAX_VALUE) {
             throw new ExceptionWithContext("Invalid array-payload instruction: element width*count overflows");
         }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.jf.smali.ImplicitReferenceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2017-10-24T13:58:10" hostname="ubuntu" time="0.95">
+  <properties/>
+  <testcase name="testImplicitMethodReference" classname="org.jf.smali.ImplicitReferenceTest" time="0.75"/>
+  <testcase name="testImplicitMethodLiteral" classname="org.jf.smali.ImplicitReferenceTest" time="0.076"/>
+  <testcase name="testImplicitFieldReference" classname="org.jf.smali.ImplicitReferenceTest" time="0.053"/>
+  <testcase name="testImplicitFieldLiteral" classname="org.jf.smali.ImplicitReferenceTest" time="0.057"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

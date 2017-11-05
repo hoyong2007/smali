@@ -1,0 +1,24 @@
+
+
+Error occurred while disassembling class La_lock; - skipping class
+org.jf.util.ExceptionWithContext: The last instruction in method La_lock;->b()V is truncated
+	at org.jf.dexlib2.dexbacked.DexBackedMethodImplementation$1$1.readNextItem(DexBackedMethodImplementation.java:88)
+	at org.jf.dexlib2.dexbacked.DexBackedMethodImplementation$1$1.readNextItem(DexBackedMethodImplementation.java:76)
+	at org.jf.dexlib2.dexbacked.util.VariableSizeLookaheadIterator.computeNext(VariableSizeLookaheadIterator.java:60)
+	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:143)
+	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:138)
+	at com.google.common.collect.ImmutableList.copyOf(ImmutableList.java:268)
+	at com.google.common.collect.ImmutableList.copyOf(ImmutableList.java:226)
+	at org.jf.baksmali.Adaptors.MethodDefinition.<init>(MethodDefinition.java:92)
+	at org.jf.baksmali.Adaptors.ClassDefinition.writeDirectMethods(ClassDefinition.java:280)
+	at org.jf.baksmali.Adaptors.ClassDefinition.writeTo(ClassDefinition.java:111)
+	at org.jf.baksmali.Baksmali.disassembleClass(Baksmali.java:152)
+	at org.jf.baksmali.Baksmali.access$000(Baksmali.java:46)
+	at org.jf.baksmali.Baksmali$1.call(Baksmali.java:76)
+	at org.jf.baksmali.Baksmali$1.call(Baksmali.java:74)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Error while processing method La_lock;->b()V
+

@@ -88,7 +88,7 @@ public class MethodDefinition {
 
         try {
             //TODO: what about try/catch blocks inside the dead code? those will need to be commented out too. ugh.
-
+            //System.err.println(methodImpl);
             instructions = ImmutableList.copyOf(methodImpl.getInstructions());
             methodParameters = ImmutableList.copyOf(method.getParameters());
 
